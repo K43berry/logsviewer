@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K43berry/logsviewer.git"
+  },
+  "author": "Keberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K43berry/logsviewer/issues"
+  },
+  "homepage": "https://github.com/K43berry/logsviewer",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.9.8",
+    "raw-body": "^2.5.2",
+    "sqlite3": "^5.1.7"
+  }
+}
