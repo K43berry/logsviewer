@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, Link, Button, Flex } from '@chakra-ui/react';
-import StatsController from './controller/controller.stats';
-import NavBar from './hooks/commonHooks/commonHooks.navBar';
+import { Box, Heading, Text} from '@chakra-ui/react';
+import StatsController from '../controller/controller.stats';
 
 const App = () => {
   const [logsStored, setLogsStored] = useState(null);
 
   const getData = async () => {
+    console.log(process.env.BACKEND_API_LINK)
+
     const response = await StatsController.getNumberOfLogs();
     const data = response.data;
     setLogsStored(data.entityCount + data.encounterCount);
@@ -14,11 +15,10 @@ const App = () => {
 
   useEffect(() => {
     getData();
-  }, []); // Use useEffect to call getData once when the component mounts
+  }, []); 
+
 
   return (
-    <Box className = "app-container-navbar">
-            <NavBar />
 
     <Box className="app-container" padding="4" maxWidth="full" margin="auto">
 
@@ -32,7 +32,6 @@ const App = () => {
           Over {logsStored} logs stored
         </Text>
       </Box>
-    </Box>
     </Box>
   );
 };

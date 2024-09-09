@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Table, Thead, Tbody, Tr, Th, Td, Text, useToast } from '@chakra-ui/react';
-import NavBar from './commonHooks/commonHooks.navBar';
 import DataService from '../service/service.sql';
 
 const Leaderboard = () => {
@@ -54,8 +53,6 @@ const Leaderboard = () => {
     };
 
     return (
-        <Box>
-            <NavBar />
             <Box p={4} maxW="1200px" mx="auto">
                 <Text fontSize="lg" mb={4}>To filter, click on any of the headers.</Text>
                 <Table variant="simple">
@@ -91,7 +88,6 @@ const Leaderboard = () => {
                     </Tbody>
                 </Table>
             </Box>
-        </Box>
     );
 };
 

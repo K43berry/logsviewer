@@ -21,7 +21,7 @@ const NavBar = () => {
         <Link href="/" fontSize="2xl" fontWeight="bold">
           Logs Uploader
         </Link>
-        
+
         <Flex as="nav" gap="4">
           <Link href="/leaderboard">Leaderboard</Link>
           {userData && <Link href="/upload">Upload</Link>}
@@ -45,15 +45,31 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              <Button as={Link} href="/signin" colorScheme="teal" variant="solid">
+              <Button
+                as={Link}
+                href="/signin"
+                colorScheme="teal"
+                variant="solid"
+                _hover={{ textDecorationLine: 'none' }}  // Disable underline specifically
+              >
                 Sign In
               </Button>
-              <Button as={Link} href="/signup" colorScheme="teal" variant="outline">
+              <Button
+                as={Link}
+                href="/signup"
+                colorScheme="teal"
+                variant="outline"
+                _hover={{ textDecorationLine: 'none' }}  // Disable underline specifically
+              >
                 Sign Up
               </Button>
             </>
           )}
-          <Link href="/settings" fontSize="2xl">
+          <Link
+            href="/settings"
+            fontSize="2xl"
+            _hover={{ textDecorationLine: 'none' }}  // Disable underline specifically
+          >
             ⚙️
           </Link>
         </Flex>

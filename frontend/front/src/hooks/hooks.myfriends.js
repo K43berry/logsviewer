@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Input, Table, Tbody, Td, Th, Thead, Tr, VStack, Text, useToast } from '@chakra-ui/react';
-import NavBar from './commonHooks/commonHooks.navBar';
 import DataService from '../service/service.sql';
 
 const MyFriends = () => {
@@ -99,7 +98,6 @@ const MyFriends = () => {
 
   return (
     <Box>
-      <NavBar />
       <Box p={4} maxW="1200px" mx="auto">
         <VStack spacing={4}>
           <Text fontSize="2xl" fontWeight="bold">Share Logs To:</Text>

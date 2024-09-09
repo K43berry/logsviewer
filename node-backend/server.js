@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 
+
 const app = express();
 
+require('dotenv').config();
+
 var corsOptions = {
-  origin: "http://localhost:8081",
+  origin: process.env.FRONTEND_LINK,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token']
 };

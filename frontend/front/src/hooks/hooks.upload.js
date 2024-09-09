@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import controllerSql from '../controller/controller.upload';
-import NavBar from './commonHooks/commonHooks.navBar';
 import { Box, Flex, Button, Text, Input } from '@chakra-ui/react';
 
 const Upload = () => {
@@ -35,10 +34,6 @@ const Upload = () => {
   const userData = getUserData();
 
   return (
-    <Box className="upload-container-navbar">
-      <Box width="100%" bg="gray.800" color="white">
-        <NavBar />
-      </Box>
 
       <Box className="upload-container" padding="4" maxWidth="800px" margin="auto" mt="8">
         <Box
@@ -89,7 +84,6 @@ const Upload = () => {
           )}
         </Box>
       </Box>
-    </Box>
   );
 };
 

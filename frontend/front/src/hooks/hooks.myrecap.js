@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Table, Thead, Tbody, Tr, Th, Td, Heading, Text} from '@chakra-ui/react';
-import NavBar from './commonHooks/commonHooks.navBar'; 
 import DataService from '../service/service.sql';
 
 const MyRecap = () => {
@@ -72,7 +71,6 @@ const MyRecap = () => {
   return (
     data && (
       <Box className="app-container" p={4}>
-        <NavBar />
         <Box className="recap-container" p={8} maxW="800px" mx="auto" borderWidth={1} borderRadius="lg" boxShadow="lg">
           <Heading mb={4}>Your Lost Ark Recapped</Heading>
           <Text fontSize="lg" mb={4}>

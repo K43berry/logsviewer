@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './commonHooks/commonHooks.navBar';
 import DataService from '../service/service.sql';
 import LogsViewer from './commonHooks/commonHooks.logViewer';
 
@@ -44,7 +43,6 @@ const FriendsLogs = () => {
 
     return (
         <>
-            <NavBar />
             {data ? <LogsViewer dat={data} /> : <div>No logs available.</div>}  {/* Display logs if data exists */}
         </>
     );

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Spinner } from '@chakra-ui/react';
-import NavBar from './commonHooks/commonHooks.navBar';
 import StatsService from '../controller/controller.stats';
 import LogsViewer from './commonHooks/commonHooks.logViewer';
 
@@ -25,7 +24,6 @@ const MyLogs = () => {
 
   return (
     <Box>
-      <NavBar />
       <Box p={4} maxW="1200px" mx="auto">
         {loading ? (
           <Box display="flex" justifyContent="center" alignItems="center" height="100vh">

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button, Text, Link, VStack, Flex } from '@chakra-ui/react';
 import loginService from '../controller/controller.login';
-import NavBar from './commonHooks/commonHooks.navBar'; 
 import DiscSignIn from './commonHooks/commonHooks.discSignIn';
 
 const SignIn = () => {
@@ -26,7 +25,6 @@ const SignIn = () => {
 
   return (
     <Box className="app-container">
-      <NavBar /> {/* Render NavBar */}
       <Flex justify="center" align="center" mt="8" flexDirection="column">
         <Box className="signin-container" p="8" borderWidth="1px" borderRadius="lg" boxShadow="md" width="100%" maxWidth="400px">
           <form onSubmit={handleSignIn}>

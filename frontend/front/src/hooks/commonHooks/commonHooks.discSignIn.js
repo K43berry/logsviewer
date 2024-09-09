@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
+import config from '../../config.js'
+
 
 const DiscSignIn = () => {
   const handleDiscordSignIn = () => {
-    window.location.href =
-      'https://discord.com/oauth2/authorize?client_id=1248348018202378273&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fdiscord%2Fauth&scope=email+identify'; // Example URL for Discord OAuth
+    window.location.href = config.DISCORD_API_LINK;
   };
 
   return (
